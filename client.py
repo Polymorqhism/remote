@@ -19,7 +19,7 @@ while not_exit:
         s.connect((SERVER_HOST, SERVER_PORT))
         
         s.sendall(command.encode())
-        print(f"Sent: {colorama.Fore.BLUE}{command}{colorama.Fore.RESET}")
+        print(f"{command}")
 
         data = s.recv(1024)
-        print(f"Received: \n\n {colorama.Fore.GREEN}{data.decode()}{colorama.Fore.RESET}")
+        print(f"{data.decode()}")
